@@ -1,4 +1,4 @@
-# Base de datos para una areolinea:
+# Base de datos para una aerolinea:
 
 Miguel Alejandro Figuera Quintero
 C.I:V-23.558.789
@@ -63,6 +63,10 @@ Estos tipos sirven para restringir los valores que pueden tomar ciertas columnas
       - **`has_one captain (from personel)`** (Los detalles del avión `tienen un` capitán): A través de `plane_details.captain_id` que referencia a `personel.id`.
       - **`has_one copilot (from personel)`** (Los detalles del avión `tienen un` copiloto): A través de `plane_details.copilot_id` que referencia a `personel.id`.
       - **`has_many stewardesses (represented as individual slots from personel)`**: (Los detalles del avión `tienen varias` azafatas, cada una en un "slot" específico): A través de `stewardess_one_id`, `stewardess_two_id`, `stewardess_three_id`, cada una referenciando a `personel.id`.
+
+## Diagrama Entidad Relacion para aerolinea.
+
+![Diagrama aerolinea](<Screenshot from 2025-05-07 03-35-37.png>)
 
 ---
 
@@ -130,3 +134,7 @@ Estos tipos sirven para restringir los valores que pueden tomar ciertas columnas
     - **Relaciones:**
       - **`belongs_to sales_order`**: Una `commercial_invoice` **`pertenece a`** un `sales_order` a través de `commercial_invoices.sales_order_id`. Si el pedido asociado se elimina, el `sales_order_id` en la factura se establecerá en `NULL` (`ON DELETE SET NULL`).
       - **`belongs_to client`**: Una `commercial_invoice` **`pertenece a`** un `client` a través de `commercial_invoices.client_id`. Se prohíbe eliminar un cliente si tiene facturas asociadas (`ON DELETE RESTRICT`).
+
+## Diagrama Entidad Relacion para exportadora.
+
+![Diagrama Entidad Relacion para exportadora](<Screenshot from 2025-05-07 03-44-31.png>)
