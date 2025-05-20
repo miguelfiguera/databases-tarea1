@@ -2,7 +2,9 @@
 
 Los nombres de los integrantes asi como la totalidad de los diagramas se encuentran en el pdf llamado Diagramas.pdf y en su version comprimida.
 
-Todos los ejercicios estan dentro de la carpeta que dice ejercicios.
+Para una explicacion completa de cada ejercicio y sus tablas pueden revisar **ExplicacionDeEjercicios.pdf** donde se detalla cada tabla y atributo de cada tabla.
+
+Todos los ejercicios en .sql estan dentro de la carpeta que dice ejercicios.
 
 Hay unos que son el schema para armar la base de datos y en el otro caso el dump que da como resultado postgresql cuando usas pg_dump.
 
